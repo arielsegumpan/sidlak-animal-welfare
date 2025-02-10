@@ -68,6 +68,22 @@ DB_USERNAME=your_username
 DB_PASSWORD=your_password
 ```
 
+```bash
+MAIL_MAILER=smtp
+MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=MAILTRAP_USERNAME
+MAIL_PASSWORD=MAILTRAP_PASSWORD
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS="sidlak-animal-welfare@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
+```
+
+```bash
+PAYMONGO_SECRET_KEY=YOUR_PAYMONGO_SECRET_KEY
+PAYMONGO_PUBLIC_KEY=YOUR_PAYMONGO_PUBLIC_KEY
+```
+
 ### 4️⃣ Generate Application Key
 
 ```bash

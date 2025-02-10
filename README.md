@@ -1,66 +1,189 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Sidlak Animal Welfare Dog Adoption System 🐾
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![FireShot Capture 037 - Sidlak Animal Welfare - SDAS - sidlak-animal-welfare test](https://github.com/user-attachments/assets/0a637989-a855-424a-a34e-058065c15f9b)
 
-## About Laravel
+The **Sidlak Dog Adoption System** is a web application designed to streamline dog adoption processes. Built using the **TALL Stack** (TailwindCSS, Alpine.js, Laravel, and Livewire), it leverages **Laravel 11** for robust backend functionality and a modern user experience.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   🐶 **Dog Management**: Add, update, and list available dogs for adoption.
+-   👤 **User Roles**: Role-based access control for admins and users.
+-   📋 **Adoption Requests**: Real-time updates and tracking of adoption applications.
+-   🌐 **TALL Stack**: Dynamic components and styling with TailwindCSS, Alpine.js, and Livewire.
+-   🔐 **Secure Authentication**: Protect sensitive data with Laravel's built-in security features.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## ⚙️ Requirements
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Ensure your environment meets these prerequisites:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-   **PHP**: >= 8.2
+-   **Composer**
+-   **Node.js**: >= 18.x
+-   **Database**: MySQL or compatible
+-   **Laravel**: Version 11
+-   **Git**
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🛠️ Installation
 
-### Premium Partners
+Follow the steps below to set up the project locally:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 1️⃣ Clone the Repository
 
-## Contributing
+```bash
+git clone https://github.com/your-username/sidlak-dog-adoption-system.git
+cd sidlak-dog-adoption-system
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 2️⃣ Install Dependencies (php and node.js)
 
-## Code of Conduct
+```bash
+composer install
+npm install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 3️⃣ Configure Environment
 
-## Security Vulnerabilities
+1. Copy .env.example to .env
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+cp .env.example .env
+```
 
-## License
+2. Update .env with your environment details
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
+
+### 4️⃣ Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+### 5️⃣ Set Up the Database
+
+-Run migrations:
+
+```bash
+php artisan migrate
+```
+
+-(Optional) Seed the database:
+
+```bash
+php artisan db:seed
+```
+
+### 6️⃣ Build Frontend Assets
+
+-For development:
+
+```bash
+npm run dev
+```
+
+-For production:
+
+```bash
+npm run build
+```
+
+### 7️⃣ Start the Application
+
+-Run migrations:
+
+```bash
+php artisan serve
+```
+
+Visit the app at http://localhost:8000.
+
+## 🛠️ Installation
+
+-   Ensure all dependencies are installed and compatible with your environment.
+-   Verify database configurations in .env.
+-   Fix file permissions if needed:
+
+```bash
+**php artisan serve**chmod -R 775 storage bootstrap/cache
+```
+
+## 🤝 Contributing
+
+We welcome contributions! Feel free to:
+
+1. Fork this repository.
+2. Create a feature branch: git checkout -b feature/your-feature.
+
+```bash
+**git checkout -b feature/your-feature-name
+```
+
+3. Commit your changes: git commit -m 'Add your feature'.
+
+```bash
+**git commit -m "Add your feature description"
+```
+
+4. Push to the branch: git push origin feature/your-feature.
+
+```bash
+**git push origin feature/your-feature-name
+```
+
+5. Open a pull request.
+
+## 📜 License
+
+<p>This project is licensed under the MIT License. Feel free to use, modify, and distribute this software in compliance with the license.</p>
+
+## 📧 Contact
+
+For inquiries or support, feel free to:
+
+-   Open an issue on this repository.
+-   Email me at [ariel](arielsegumpan31@gmail.com).
+
+## 📷 Screenshots
+
+### Home
+
+![SDAS - HOME](https://github.com/user-attachments/assets/bc23233e-7cb3-4b10-8a69-583dc8485e7e)
+
+### Donation
+
+![SDAS - DONATION](https://github.com/user-attachments/assets/84c619dc-b672-4b96-b527-da8c8bd9bb52)
+
+### Volunteer
+
+![SDAS - VOLUNTEER](https://github.com/user-attachments/assets/583ff046-c70f-4f62-8429-9313357e7f08)
+
+### Blog
+
+![SDAS - BLOG](https://github.com/user-attachments/assets/4579e9b9-fcbe-4daf-8864-3f9ec44c0638)
+
+### Dog
+
+![SDAS - DOGS](https://github.com/user-attachments/assets/6bffd003-aa9c-4834-bc15-75a7589c27f2)
+
+## Admin Dashboard
+
+![FireShot Capture 039 - Dashboard - Sidlak Animal Welfare - sidlak-animal-welfare test](https://github.com/user-attachments/assets/e021b57e-35b3-46ad-b44e-93936ea57bd7)
+
+![FireShot Capture 040 - Dogs - Sidlak Animal Welfare - sidlak-animal-welfare test](https://github.com/user-attachments/assets/e8f6a20a-3ab3-4a50-af01-bc1b67f7e6ff)
+
+![FireShot Capture 041 - Molly - Siberian Husky - Sidlak Animal Welfare - sidlak-animal-welfare test](https://github.com/user-attachments/assets/bcedfda1-cb3b-46c2-a8a2-4b9e27495bb6)
+
+![FireShot Capture 049 - Homemade Dog Treat Recipes Your Pup Will Love - Sidlak Animal Welfare_ - sidlak-animal-welfare test](https://github.com/user-attachments/assets/616e9c9e-6f01-4819-8b5e-2f7503cec715)

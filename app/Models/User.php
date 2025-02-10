@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
@@ -33,7 +34,7 @@ class User extends Authenticatable implements FilamentUser
     use Notifiable;
     use TwoFactorAuthenticatable;
     use HasRoles;
-    use HasPanelShield;
+    // use HasPanelShield;
 
     /**
      * The attributes that are mass assignable.
@@ -113,7 +114,20 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessPanel(Panel $panel): bool
     {
-        return $this->hasAnyRole(['super_admin', 'volunteer', 'admin']);
+        $user = Auth::user(); // or use auth()->user()
+
+        if (!$user) {
+            return false; // Prevents errors when no user is logged in
+        }
+
+        return $user->hasAnyRole(['super_admin','admin']);
+    }
+
+
+
+    public function announcements() : HasMany
+    {
+        return $this->hasMany(Announcement::class);
     }
 
 

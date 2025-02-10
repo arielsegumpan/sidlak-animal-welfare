@@ -73,13 +73,11 @@ class AdminPanelProvider extends PanelProvider
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
-                CheckPaymentStatus::class,
+                // CheckPaymentStatus::class,
             ])
             ->plugins([
                 FilamentShieldPlugin::make(),
-                // ->authMiddleware([
-                //     Authenticate::class,
-                // ])
             ]);
+            // ->databaseNotifications();
     }
 }

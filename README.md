@@ -25,6 +25,8 @@ Ensure your environment meets these prerequisites:
 -   **Node.js**: >= 18.x
 -   **Database**: MySQL or compatible
 -   **Laravel**: Version 11
+-   **luigel/laravel-paymongo**: >= 2.5
+-   **flowframe/laravel-trend**: >= 0.3.0
 -   **Git**
 
 ---

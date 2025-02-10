@@ -112,6 +112,14 @@ php artisan serve
 
 Visit the app at http://localhost:8000.
 
+### Storage link
+
+```bash
+rm public/storage
+
+php artisan storage:link
+```
+
 ## 🛠️ Installation
 
 -   Ensure all dependencies are installed and compatible with your environment.

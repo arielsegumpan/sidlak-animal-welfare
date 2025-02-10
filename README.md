@@ -114,6 +114,8 @@ Visit the app at http://localhost:8000.
 
 ### Storage link
 
+To display images in the pages
+
 ```bash
 rm public/storage
 

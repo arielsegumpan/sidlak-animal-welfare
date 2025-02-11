@@ -4,15 +4,12 @@
 
 The **Sidlak Dog Adoption System** is a web application designed to streamline dog adoption processes. Built using the **TALL Stack** (TailwindCSS, Alpine.js, Laravel, and Livewire), it leverages **Laravel 11** for robust backend functionality and a modern user experience.
 
-## Researcher Team
+## 👨‍💻 Contributors
 
-### Nonilo Aujero
-
-### Rey Oridina
-
-### Mini
-
-### Glydel Villareza
+-   ✅ **Nonilo Aujero**
+-   ✅ **Rey Oridina**
+-   ✅ **Mini**
+-   ✅ **Glydel Villareza**
 
 ---
 
